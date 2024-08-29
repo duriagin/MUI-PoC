@@ -1,0 +1,17 @@
+.MuiDataGrid-main>div:last-child {
+  display: none
+}
+
+.MuiDataGrid-filterFormColumnInput,
+.MuiDataGrid-filterFormOperatorInput {
+  justify-content: end;
+}
+
+.MuiDataGrid-filterFormValueInput {
+  width: auto !important;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
