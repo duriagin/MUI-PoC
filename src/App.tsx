@@ -155,6 +155,7 @@ export default function App() {
             // filters
             filterMode="server"
             onFilterModelChange={onFilterModelChange}
+            filterDebounceMs={300}
             // styles
             rowHeight={47}
             columnHeaderHeight={47}
