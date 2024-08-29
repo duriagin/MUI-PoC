@@ -35,6 +35,7 @@ export default function GridFilterDateInput(props: GridFilterInputValueProps) {
         value={item.value ? dayjs(item.value) : null}
         height={29.5}
         variant="borderless"
+        format={"DD/MM/YYYY"}
         placeholder={""}
         style={{
           height: 29.5,

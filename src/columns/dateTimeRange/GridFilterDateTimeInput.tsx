@@ -40,6 +40,7 @@ export default function GridFilterDateTimeInput(
         variant="borderless"
         showTime
         placeholder={["", ""]}
+        format={"DD/MM/YYYY HH:mm:ss"}
         style={{
           height: 29.5,
           paddingInline: 0,

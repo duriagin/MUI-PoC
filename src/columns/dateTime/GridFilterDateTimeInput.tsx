@@ -38,6 +38,7 @@ export default function GridFilterDateTimeInput(
         value={item.value ? dayjs(item.value) : null}
         height={29.5}
         variant="borderless"
+        format={"DD/MM/YYYY HH:mm:ss"}
         placeholder={""}
         style={{
           height: 29.5,
