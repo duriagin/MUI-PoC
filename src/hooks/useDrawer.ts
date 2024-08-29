@@ -24,9 +24,11 @@ export function useDrawer(apiRef: React.MutableRefObject<GridApiPro>) {
       // animation (0.3s) should go first
       setTimeout(
         () => {
-          apiRef.current.scrollToIndexes({
+          const colIndex =
             // @ts-expect-error ariaColIndex
-            colIndex: event.target.ariaColIndex,
+            event.target.ariaColIndex ?? event.target.parentNode.ariaColIndex;
+          apiRef.current.scrollToIndexes({
+            colIndex,
           });
         },
         details ? 0 : 300,
