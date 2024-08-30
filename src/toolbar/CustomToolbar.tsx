@@ -52,7 +52,7 @@ export default function CustomToolbar(props: ToolbarProps) {
   }, [currentPreset]);
 
   return (
-    <div style={{ display: "flex" }}>
+    <div style={{ display: "flex", flexWrap: "nowrap", overflowX: "auto" }}>
       <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
         <InputLabel id="preset-label">Preset</InputLabel>
         <MuiSelect

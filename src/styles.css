@@ -11,6 +11,10 @@
   width: auto !important;
 }
 
+.MuiDataGrid-toolbarContainer {
+  flex-wrap: nowrap !important;
+}
+
 body {
   padding: 0;
   margin: 0;
