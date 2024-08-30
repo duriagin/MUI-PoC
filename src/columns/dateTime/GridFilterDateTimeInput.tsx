@@ -19,6 +19,7 @@ export default function GridFilterDateTimeInput(
         display: "flex",
         height: 46,
       }}
+      onKeyDown={(e) => e.stopPropagation()}
     >
       <div
         style={{
