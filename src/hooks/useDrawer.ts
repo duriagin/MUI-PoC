@@ -19,7 +19,17 @@ export function useDrawer(apiRef: React.MutableRefObject<GridApiPro>) {
     (params, event) => {
       if (params.field == "actions") return;
 
-      setDetails(params.row);
+      setDetails(
+        Object.keys(params.row).reduce((accum, key) => {
+          const colDef = apiRef.current.getColumn(key);
+          if (!colDef) return accum;
+
+          return {
+            ...accum,
+            [key]: apiRef.current.getRowFormattedValue(params.row, colDef),
+          };
+        }, {} as GridRowParams<never>),
+      );
 
       // animation (0.3s) should go first
       setTimeout(
