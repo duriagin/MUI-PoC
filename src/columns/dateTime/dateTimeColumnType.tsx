@@ -29,7 +29,7 @@ export const dateTimeColumnType: GridColTypeDef<Date, string> = {
   ],
   valueFormatter: (value) => {
     if (value) {
-      return dateAdapter.formatByString(value, "L hh:mm:ss");
+      return dateAdapter.formatByString(value, "DD/MM/YYYY hh:mm:ss");
     }
 
     return "";

@@ -23,7 +23,7 @@ export const dateRangeColumnType: GridColTypeDef<Date, string> = {
   ],
   valueFormatter: (value) => {
     if (value) {
-      return dateAdapter.format(value, "keyboardDate");
+      return dateAdapter.formatByString(value, "DD/MM/YYYY");
     }
     return "";
   },
