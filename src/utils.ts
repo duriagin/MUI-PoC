@@ -19,13 +19,14 @@ export function normalizeFilterModel(
 ): string | undefined {
   const queryParts: string[] = [];
   const operatorMap: { [key: string]: string } = {
-    not: "ne",
+    equals: "",
     is: "",
     "=": "",
     "<": "lt",
     "<=": "lte",
     ">": "gt",
     ">=": "gte",
+    not: "ne",
     "!=": "ne",
   };
 
